@@ -1,0 +1,84 @@
+#Task 1
+
+a = int(input())
+b = int(input())
+if a%b == 0:
+    print("%d делится на %d" % (a,b))
+else:
+    print("%d не делится на %d" % (a,b))
+    
+#Task 2
+
+print('Введите три числа: ')
+a = int(input())
+b = int(input())
+c = int(input())
+ 
+if a < b < c or a < c < b:
+    print('Наименьшее:', a)
+elif b < a < c or b < c < a:
+    print('Наименьшее:', b)
+else:
+    print('Наименьшее:', c)
+   
+#Task 3
+
+print("Стороны:")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+if a + b > c and a + c > b and b + c > a:
+    print("Треугольник существует")
+else:
+    print("Треугольник не существует")
+    
+#Task 4
+
+import math
+
+print("Введите коэффициенты для уравнения")
+print("ax^2 + bx + c = 0:")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+discr = b ** 2 - 4 * a * c
+print("Дискриминант D = %.2f" % discr)
+
+if discr > 0:
+    x1 = (-b + math.sqrt(discr)) / (2 * a)
+    x2 = (-b - math.sqrt(discr)) / (2 * a)
+    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+elif discr == 0:
+    x = -b / (2 * a)
+    print("x = %.2f" % x)
+else:
+    print("Корней нет")
+    
+#Task 5
+
+using namespace std;
+ 
+main()
+{
+ 
+    int summ;
+    char vowel[6] = {'a', 'e', 'i', 'o', 'u', 'y'};
+    string frase;
+ 
+ 
+      cout<<"Input frase: "<<endl;
+      getline(cin, frase);
+ 
+      summ = 0;
+ 
+      for(int i=0; i<6; i++)
+       for(int j=0; j<frase.length(); j++)
+        if(tolower(frase[j])==vowel[i]) summ++;
+ 
+     cout<<"Numbers in frase = "<<summ;
+ 
+    getch();
+ 
+}
