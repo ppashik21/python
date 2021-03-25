@@ -11,5 +11,11 @@ while n > 0:
 
 print("Сумма:", suma)
 
-#Task 2
+#Task 3
 
+def isPalindrome(string):
+    foo = str(string)
+    if foo[::-1].startswith(foo):
+        return True
+    else:
+        return False
